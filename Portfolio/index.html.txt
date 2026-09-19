@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio - Kristoffe Santos</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<header>
+<div class="navbar">
+<div class="logo">PORTFOLIO</div>
+<nav>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search..." />
+</div>
+</div>
+</header>
+
+<main class="container">
+<!-- Hero / Intro -->
+<section class="hero" id="home">
+<div class="hero-text">
+<h1>Hello, I'm Kristoffe Santos</h1>
+<p>
+Welcome to my personal portfolio website! This website showcases my projects, achievements, and experiences as an Information Technology student.
+</p>
+<p>
+I enjoy learning web development, programming, and creating responsive websites. Every project helps me improve my technical skills and prepares me for future opportunities in the IT industry.
+</p>
+<p>
+My goal is to continue learning new technologies, build useful applications, and become a skilled software developer who can contribute to real-world solutions.
+</p>
+<a href="#projects" class="btn">Explore My Projects</a>
+</div>
+<div class="hero-image">
+<!-- Replace 'profile.jpg' with your photo -->
+<img src="https://via.placeholder.com/130x150" alt="Kristoffe Santos" />
+</div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+<h2 class="section-title">My Projects</h2>
+<div class="card-grid">
+<!-- Project 1 -->
+<article class="card">
+<div class="card-content">
+<h3>Portfolio Website</h3>
+<span class="subtitle">HTML & CSS Project • 2026</span>
+<p>
+A responsive portfolio website designed using semantic HTML and CSS. This project introduces myself, highlights my achievements, and demonstrates my understanding of modern web design principles.
+</p>
+</div>
+<a href="#" class="btn btn-full">View Project</a>
+</article>
+
+<!-- Project 2 -->
+<article class="card">
+<div class="card-content">
+<h3>Restaurant Website</h3>
+<span class="subtitle">School Activity • 2026</span>
+<p>
+A restaurant website developed as part of a classroom activity. It focuses on creating organized layouts, responsive navigation, and an attractive interface using only HTML and CSS.
+</p>
+</div>
+<a href="#" class="btn btn-full">View Project</a>
+</article>
+
+<!-- Project 3 -->
+<article class="card">
+<div class="card-content">
+<h3>Hotel Booking Website</h3>
+<span class="subtitle">Personal Project • 2026</span>
+<p>
+A simple hotel reservation webpage created to practice responsive layouts, forms, and user-friendly website design while improving front-end development skills.
+</p>
+</div>
+<a href="#" class="btn btn-full">View Project</a>
+</article>
+</div>
+</section>
+
+<!-- About Me Section -->
+<section id="about">
+<h2 class="section-title">About Me</h2>
+<div class="about-box">
+<p>
+Hello! My name is Kristoffe Santos, and I am an Information Technology student with a strong interest in web development, programming, and software development. I enjoy building websites, learning different programming languages, and exploring new technologies that improve my knowledge and practical skills. Every project I complete helps me become more confident in creating responsive and user-friendly applications. Aside from coding, I value teamwork, continuous learning, and solving real-world problems through technology. My long-term goal is to become a professional software developer and contribute to meaningful projects that make people's lives easier.
+</p>
+</div>
+</section>
+
+<!-- Achievements Section -->
+<section id="achievements">
+<h2 class="section-title">Achievements</h2>
+<div class="card-grid-2">
+<!-- Achievement 1 -->
+<article class="card">
+<div class="card-content">
+<h3>Portfolio Development</h3>
+<p>
+Successfully designed and developed a responsive personal portfolio website using HTML and CSS while applying modern web design principles.
+</p>
+</div>
+<a href="#" class="btn btn-sm">View</a>
+</article>
+
+<!-- Achievement 2 -->
+<article class="card">
+<div class="card-content">
+<h3>Academic Projects</h3>
+<p>
+Completed multiple programming and web development activities that enhanced my understanding of HTML, CSS, and responsive website design.
+</p>
+</div>
+<a href="#" class="btn btn-sm">View</a>
+</article>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+<h2 class="section-title">Contact Me</h2>
+<div class="contact-container">
+<div class="contact-info">
+<p>
+Thank you for visiting my portfolio! I appreciate your time and interest in learning more about me and my work.
+</p>
+<p>
+If you have any questions, suggestions, or would like to collaborate on future projects, feel free to send me a message using the contact form.
+</p>
+<p class="email-info">
+<strong>Email:</strong> <a href="mailto:kristoffesantos@example.com">kristoffesantos@example.com</a>
+</p>
+</div>
+
+<form class="contact-form" id="contactForm">
+<input type="text" id="name" placeholder="Your Name" required />
+<input type="email" id="email" placeholder="Your Email" required />
+<textarea id="message" rows="3" placeholder="Your Message (optional)"></textarea>
+<button type="submit" class="btn btn-full">Submit</button>
+</form>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer>
+<p>&copy; 2026 Kristoffe Santos. All Rights Reserved.</p>
+</footer>
+
+<script>
+// Handle form submit
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+e.preventDefault();
+const name = document.getElementById('name').value;
+alert(`Thank you, ${name}! Your message has been sent.`);
+this.reset();
+});
+
+// Simple search filter for cards
+document.getElementById('searchInput').addEventListener('input', function(e) {
+const filter = e.target.value.toLowerCase();
+const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+const text = card.textContent.toLowerCase();
+card.style.display = text.includes(filter) ? 'flex' : 'none';
+});
+});
+</script>
+</body>
+</html>
