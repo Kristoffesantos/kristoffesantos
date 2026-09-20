@@ -31,14 +31,7 @@ const projectList = document.getElementById('project-list');
 const projectSearch = document.getElementById('project-search');
 const projectCount = document.getElementById('project-count');
 
-/**
- * Filters a project list according to a search term.
- * Pure function: Does NOT directly modify the webpage.
- *
- * @param {Array<Object>} list - The project array to filter.
- * @param {string} searchTerm - The string entered by the user.
- * @returns {Array<Object>} The filtered list matching title, description, or tags.
- */
+
 function filterProjects(list, searchTerm) {
   if (!Array.isArray(list)) {
     return [];
@@ -46,7 +39,7 @@ function filterProjects(list, searchTerm) {
 
   const cleanedTerm = (searchTerm || '').trim().toLowerCase();
 
-  // If the search input is empty, return the complete list
+
   if (cleanedTerm === '') {
     return list;
   }
@@ -64,28 +57,21 @@ function filterProjects(list, searchTerm) {
   });
 }
 
-/**
- * Renders the project cards and updates the project count.
- * This is the ONLY function that writes the project results/count to the page.
- * Uses document.createElement() and textContent to prevent unsafe injection.
- *
- * @param {Array<Object>} list - The list of projects to display.
- */
+
 function renderProjects(list) {
   if (!projectList || !projectCount) {
     return;
   }
 
-  // Clear existing items in container
+
   projectList.textContent = '';
 
   const totalCount = projects.length;
   const currentCount = Array.isArray(list) ? list.length : 0;
 
-  // Update project count indicator
+
   projectCount.textContent = 'Showing ' + currentCount + ' of ' + totalCount + ' projects';
 
-  // Handle empty state
   if (currentCount === 0) {
     const emptyItem = document.createElement('li');
     emptyItem.className = 'no-results';
@@ -94,12 +80,12 @@ function renderProjects(list) {
     return;
   }
 
-  // Loop through list and build DOM cards
+
   list.forEach(function (project) {
     const cardItem = document.createElement('li');
     cardItem.className = 'project-card';
 
-    // Header container (title + year)
+  
     const cardHeader = document.createElement('div');
     cardHeader.className = 'project-card-header';
 
@@ -114,12 +100,12 @@ function renderProjects(list) {
     cardHeader.appendChild(cardTitle);
     cardHeader.appendChild(cardYear);
 
-    // Description
+    
     const cardDesc = document.createElement('p');
     cardDesc.className = 'project-desc';
     cardDesc.textContent = project.description || 'No description available.';
 
-    // Tags container
+ 
     const tagsContainer = document.createElement('div');
     tagsContainer.className = 'project-tags';
 
@@ -132,7 +118,7 @@ function renderProjects(list) {
       });
     }
 
-    // Assemble card
+  
     cardItem.appendChild(cardHeader);
     cardItem.appendChild(cardDesc);
     cardItem.appendChild(tagsContainer);
@@ -141,10 +127,10 @@ function renderProjects(list) {
   });
 }
 
-// Initial render on page load
+
 renderProjects(projects);
 
-// Real-time search event listener
+
 if (projectSearch) {
   projectSearch.addEventListener('input', function (event) {
     const currentInput = event.target.value;
