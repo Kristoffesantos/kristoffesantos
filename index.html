@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kristoffe Santos | BSIT Web Development Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">Kristoffe<span>Santos</span></a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <p class="hero-tag">Student Portfolio</p>
+        <h1 class="hero-title">Hi, I'm <span class="highlight">Kristoffe Santos</span></h1>
+        <h2 class="hero-subtitle">BS Information Technology | Web Development</h2>
+        <p class="hero-description">
+          A 2nd-year college student passionate about building clean, accessible, and interactive web applications using foundational web technologies.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <div class="title-underline"></div>
+        </div>
+        <div class="about-card">
+          <p>
+            I am currently in my 2nd year pursuing a Bachelor of Science in Information Technology, specializing in Web Development. My current focus is strengthening my core knowledge in semantic HTML, modern responsive CSS layouts, and vanilla JavaScript programming.
+          </p>
+          <p>
+            Through academic coursework and hands-on laboratory activities, I enjoy solving problems and creating projects that demonstrate interactive functionality without relying on heavy frameworks.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Projects</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">Search my academic projects by title, description, or technology tag.</p>
+        </div>
+
+        <!-- Project Controls -->
+        <div class="project-controls">
+          <div class="search-box">
+            <label for="project-search" class="visually-hidden">Search projects</label>
+            <input 
+              id="project-search" 
+              type="search" 
+              placeholder="Search projects by name, tag (e.g. HTML, Linux)..."
+              autocomplete="off"
+            >
+          </div>
+          <p id="project-count" aria-live="polite"></p>
+        </div>
+
+        <!-- Dynamic Container (Populated by script.js) -->
+        <ul id="project-list" class="project-grid" aria-label="Project cards list"></ul>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">Feel free to reach out for academic collaborations or inquiries.</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <a href="mailto:kristoffesantos763@gmail.com" class="contact-link">kristoffesantos763@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">GitHub</span>
+            <a href="https://github.com/Kristoffesantos" target="_blank" rel="noopener noreferrer" class="contact-link">github.com/Kristoffesantos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Kristoffe Santos. All rights reserved.</p>
+      <p class="footer-tag">BSIT Web Development Student Project</p>
+    </div>
+  </footer>
+
+</body>
+</html>
