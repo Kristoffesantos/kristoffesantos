@@ -48,7 +48,7 @@ function filterProjects(list, searchTerm) {
     const titleMatch = (project.title || '').toLowerCase().includes(cleanedTerm);
     const descMatch = (project.description || '').toLowerCase().includes(cleanedTerm);
     
-    // Check if any tag matches the search term
+ 
     const tagMatch = Array.isArray(project.tags) && project.tags.some(function (tag) {
       return (tag || '').toLowerCase().includes(cleanedTerm);
     });
