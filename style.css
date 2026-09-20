@@ -23,7 +23,7 @@
 --font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* STREAMING_CHUNK:Configuring base document styles and reset */
+
 
 {
 box-sizing: border-box;
@@ -71,7 +71,7 @@ white-space: nowrap;
 border: 0;
 }
 
-/* STREAMING_CHUNK:Styling navigation bar */
+
 .header {
 position: sticky;
 top: 0;
@@ -113,7 +113,6 @@ font-weight: 500;
 color: var(--text-primary);
 }
 
-/* STREAMING_CHUNK:Styling hero section */
 .hero-section {
 padding: 5rem 0 4rem;
 border-bottom: 1px solid var(--border-color);
@@ -198,7 +197,7 @@ background-color: var(--bg-card);
 border-color: var(--text-secondary);
 }
 
-/* STREAMING_CHUNK:Styling general sections */
+
 .section {
 padding: 4.5rem 0;
 border-bottom: 1px solid var(--border-color);
@@ -217,7 +216,7 @@ margin-bottom: 2rem;
 font-size: 0.98rem;
 }
 
-/* STREAMING_CHUNK:Styling about section */
+
 .about-card {
 background-color: var(--bg-card);
 border: 1px solid var(--border-color);
@@ -260,7 +259,6 @@ font-size: 0.85rem;
 color: var(--text-muted);
 }
 
-/* STREAMING_CHUNK:Styling interactive projects controls and list */
 .project-controls {
 margin-bottom: 1.75rem;
 }
@@ -374,8 +372,6 @@ border-radius: var(--radius-md);
 color: var(--text-secondary);
 font-size: 1rem;
 }
-
-/* STREAMING_CHUNK:Styling contact and footer */
 .contact-card {
 background-color: var(--bg-card);
 border: 1px solid var(--border-color);
@@ -414,7 +410,7 @@ margin-top: 0.35rem;
 color: var(--text-secondary);
 }
 
-/* STREAMING_CHUNK:Configuring responsive media queries */
+
 @media (max-width: 680px) {
 .hero-title {
 font-size: 2rem;
